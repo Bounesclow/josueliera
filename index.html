@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Diseñador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #e0f2fe;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(2, 6, 23, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e0f2fe;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #38bdf8;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 1px solid #38bdf8;
+      background: transparent;
+      color: #38bdf8;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    section {
+      padding: 80px 40px;
+    }
+
+    h3 {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 30px;
+      color: #38bdf8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #0f172a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(56,189,248,0.2);
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h1>MiPortafolio</h1>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#redes">Redes</a></li>
+    <li><a href="#web">Web</a></li>
+    <li><a href="#logos">Logos</a></li>
+    <li><a href="#foto">Fotografía</a></li>
+    <li><a href="#video">Video</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="inicio">
+  <canvas id="stars"></canvas>
+  <div class="hero-content">
+    <h2>Diseñador Creativo</h2>
+    <p>Portafolio profesional futurista</p>
+    <button class="btn">Descargar CV</button>
+  </div>
+</section>
+
+<section id="redes">
+  <h3>Diseño para Redes</h3>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+  </div>
+</section>
+
+<section id="web">
+  <h3>Web</h3>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+  </div>
+</section>
+
+<section id="logos">
+  <h3>Logos</h3>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+  </div>
+</section>
+
+<section id="foto">
+  <h3>Fotografía</h3>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+  </div>
+</section>
+
+<section id="video">
+  <h3>Video</h3>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+    <div class="card"><img src="https://via.placeholder.com/400"></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 - Tu Nombre
+</footer>
+
+<script>
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+for (let i = 0; i < 150; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2,
+    speed: Math.random() * 0.5
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#38bdf8";
+
+  stars.forEach(star => {
+    star.y += star.speed;
+    if (star.y > canvas.height) star.y = 0;
+    ctx.fillRect(star.x, star.y, star.size, star.size);
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
