@@ -1,254 +1,336 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio - Diseñador</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #020617;
-      color: #e0f2fe;
-      overflow-x: hidden;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background: rgba(2, 6, 23, 0.8);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
-
-    nav h1 {
-      font-family: 'Orbitron', sans-serif;
-      color: #38bdf8;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #e0f2fe;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    /* HERO */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #38bdf8;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      opacity: 0.8;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: 1px solid #38bdf8;
-      background: transparent;
-      color: #38bdf8;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #38bdf8;
-      color: #020617;
-    }
-
-    section {
-      padding: 80px 40px;
-    }
-
-    h3 {
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 30px;
-      color: #38bdf8;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 10px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #38bdf8;
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      background: #0f172a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid rgba(56,189,248,0.2);
-      opacity: 0.6;
-    }
-  </style>
 </head>
+
 <body>
 
-<nav>
-  <img src="https://bounesclow.github.io/josueliera/logojosue.png" alt="" height="80px" width="auto">
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#redes">Redes</a></li>
-    <li><a href="#web">Web</a></li>
-    <li><a href="#logos">Logos</a></li>
-    <li><a href="#foto">Fotografía</a></li>
-    <li><a href="#video">Video</a></li>
-  </ul>
-</nav>
+  <nav>
+    <img src="https://bounesclow.github.io/josueliera/logojosue.png" alt="" height="80px" width="auto">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#redes">Redes</a></li>
+      <li><a href="#web">Web</a></li>
+      <li><a href="#foto">Fotografía</a></li>
+      <li><a href="#video">Video</a></li>
+    </ul>
+  </nav>
+  <section class="hero" id="inicio">
+    <canvas id="stars"></canvas>
 
-<section class="hero" id="inicio">
-  <canvas id="stars"></canvas>
-  <div class="hero-content">
-    <h2>Diseñador Creativo</h2>
-    <p>Portafolio profesional futurista</p>
-    <button class="btn">Descargar CV</button>
-  </div>
-</section>
+    <div class="hero-content">
+      <h2>Diseñador Gráfico / Web</h2>
 
-<section id="redes">
-  <h3>Diseño para Redes</h3>
-  <div class="grid">
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-  </div>
-</section>
+      <p>Diseñador gráfico y desarrollador web enfocado en crear experiencias visuales funcionales y modernas.</p>
 
-<section id="web">
-  <h3>Web</h3>
-  <div class="grid">
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-  </div>
-</section>
+      <button class="btn"><a style="text-decoration: none; color: #38bdf8;" href="https://drive.google.com/file/d/1GaoiZeuWticB19b_xkz81RX2GUSKOiSP/view?usp=sharing" target="_blank"> Descargar CV</a></button>
+    </div>
+  </section>
 
-<section id="logos">
-  <h3>Logos</h3>
-  <div class="grid">
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-  </div>
-</section>
 
-<section id="foto">
-  <h3>Fotografía</h3>
-  <div class="grid">
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-  </div>
-</section>
+  <section class="about" id="about">
+    <div class="about-container">
+
+      <!-- Imagen -->
+      <div class="about-img">
+        <img src="photo-gallery/Yomerengues.jpg" alt="Josué Liera">
+      </div>
+
+      <!-- Texto -->
+      <div class="about-text">
+        <h3>Sobre mí</h3>
+
+        <p>
+          Soy Josué Liera, diseñador gráfico egresado de la Universidad Autónoma Metropolitana, con especialidad en
+          diseño para redes sociales y UI/UX web.
+        </p>
+
+        <p>
+          Me enfoco en crear experiencias visuales funcionales combinando diseño y desarrollo web. Trabajo con
+          tecnologías como HTML, .NET y PHP, integrando soluciones tanto creativas como técnicas.
+        </p>
+
+        <p>
+          Actualmente me desempeño en la gestión de bases de datos con SQL Server y en el desarrollo de interfaces web,
+          colaborando en proyectos para clientes importantes en México.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="redes">
+    <h3>Diseño para Redes</h3>
+
+
+     <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/Josue Liera_día del mensajero.jpg" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/mensajero.gif"
+            alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/PROTEINA-MAZAPAN.png" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/Snapinsta.app_335144042_875778230205494_1418515152140441338_n_1080.jpg"
+            alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/joseomega_alpha-hidro-21.png" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/FILOSOFIA-DEL-DEPORTE.png" alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="web">
+    <h3>Diseño Web / UIUX</h3>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/omegaweb_Mesa-de-trabajo-1.jpg" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/cukur_Mesa-de-trabajo-1.jpg" alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+
+ <section id="foto">
+    <h3>Fotografía</h3>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/meurta1.jpg" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/IMG_0641-Editar.jpg" alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+     <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/IMG_1245.jpg" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/IMG_2377.jpg" alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+     <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/muerta2.jpg" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/pajarito1.jpg" alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+
+  <section id="Ilustraciones">
+    <h3>Ilustraciones</h3>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/AMONOS_Mesa-de-trabajo-1.png" alt="Diseño proteína mazapán">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="photo-gallery/1.png" alt="Diseño redes sociales">
+        </div>
+      </div>
+
+    </div>
+    <br>
+    
+    
+  </section>
+
+
+
 
 <section id="video">
   <h3>Video</h3>
-  <div class="grid">
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
-    <div class="card"><img src="https://via.placeholder.com/400"></div>
+
+  <div class="playlist">
+
+    <a href="https://www.youtube.com/watch?v=AKj7qyZuxDI" target="_blank" class="track">
+      <div class="track-left">
+        <span class="play-icon">▶</span>
+        <span class="track-title">Entrevista "El regreso del Valiente"</span>
+      </div>
+      <span class="track-url">YouTube</span>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=xLqitwMhZQQ" target="_blank" class="track">
+      <div class="track-left">
+        <span class="play-icon">▶</span>
+        <span class="track-title">JAROCHITA se prepara para lucha contra REYNA ISIS máscara vs máscara</span>
+      </div>
+      <span class="track-url">YouTube</span>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=gEKyPtB-mAU" target="_blank" class="track">
+      <div class="track-left">
+        <span class="play-icon">▶</span>
+        <span class="track-title">Conviértete en Luchador Profesional - Comienza tu carrera</span>
+      </div>
+      <span class="track-url">YouTube</span>
+    </a>
+
+    <a href="https://www.youtube.com/shorts/3m4O9kl-Wz4" target="_blank" class="track">
+      <div class="track-left">
+        <span class="play-icon">▶</span>
+        <span class="track-title">SuperPUMP</span>
+      </div>
+      <span class="track-url">Short</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@bounezmusic/video/7627355242908175637" target="_blank" class="track">
+      <div class="track-left">
+        <span class="play-icon">▶</span>
+        <span class="track-title">Esta no es la vida que soñé</span>
+      </div>
+      <span class="track-url">TikTok</span>
+    </a>
+
+    <a href="https://www.youtube.com/shorts/DPhjH6reaWg" target="_blank" class="track">
+      <div class="track-left">
+        <span class="play-icon">▶</span>
+        <span class="track-title">¿Cómo funciona la testosterona?</span>
+      </div>
+      <span class="track-url">Short</span>
+    </a>
+
   </div>
 </section>
 
-<footer>
-  © 2026 - Tu Nombre
-</footer>
 
-<script>
-const canvas = document.getElementById("stars");
-const ctx = canvas.getContext("2d");
+  <footer>
+    © 2026 - Josue Liera Design
+  </footer>
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  <script>
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
 
-let stars = [];
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-for (let i = 0; i < 150; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    size: Math.random() * 2,
-    speed: Math.random() * 0.5
-  });
-}
+    let stars = [];
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#38bdf8";
+    for (let i = 0; i < 150; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2,
+        speed: Math.random() * 0.5
+      });
+    }
 
-  stars.forEach(star => {
-    star.y += star.speed;
-    if (star.y > canvas.height) star.y = 0;
-    ctx.fillRect(star.x, star.y, star.size, star.size);
-  });
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#38bdf8";
 
-  requestAnimationFrame(animate);
-}
+      stars.forEach(star => {
+        star.y += star.speed;
+        if (star.y > canvas.height) star.y = 0;
+        ctx.fillRect(star.x, star.y, star.size, star.size);
+      });
 
-animate();
-</script>
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
 
 </body>
+
 </html>
